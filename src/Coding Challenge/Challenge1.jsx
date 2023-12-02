@@ -23,6 +23,10 @@ function Challenge1() {
     console.log(`John's BMI (${(johnBMI).toFixed(1)}) is higher than Marks's BMI (${(markBMI).toFixed(1)})`);
   }
 
+  
+  const number = 0;
+  console.log(Boolean(number))
+
   return <div>Challenge1</div>;
 }
 
