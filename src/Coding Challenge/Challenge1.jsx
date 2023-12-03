@@ -30,6 +30,9 @@ function Challenge1() {
   const number = 1;
   console.log(Boolean(number))
 
+  const number = 1;
+  console.log(String(number))
+
   return <div>Challenge1</div>;
 }
 
