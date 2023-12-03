@@ -27,6 +27,9 @@ function Challenge1() {
   const number = 0;
   console.log(Boolean(number))
 
+  const number = 1;
+  console.log(Boolean(number))
+
   return <div>Challenge1</div>;
 }
 
