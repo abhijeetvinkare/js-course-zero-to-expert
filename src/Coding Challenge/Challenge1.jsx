@@ -30,8 +30,14 @@ function Challenge1() {
   const number2 = 1;
   console.log(Boolean(number2))
 
-  const number3 = 1;
-  console.log(String(number3))
+  const number3 = prompt("Enter a Number: ")
+  console.log(typeof number3);
+
+  if (number3 === 18) {
+       console.log("Number")
+  }else {
+    console.log("String")
+  }
 
   return <div>Challenge1</div>;
 }
