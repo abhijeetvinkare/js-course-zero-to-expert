@@ -18,26 +18,40 @@ function Challenge1() {
   console.log(markBMI, johnBMI, markHeigherBMI);
 
   if (markHeigherBMI) {
-    console.log(`Mark's BMI (${(markBMI).toFixed(1)}) is higher than John's BMI (${(johnBMI).toFixed(1)})`);
-  }else{
-    console.log(`John's BMI (${(johnBMI).toFixed(1)}) is higher than Marks's BMI (${(markBMI).toFixed(1)})`);
+    console.log(
+      `Mark's BMI (${markBMI.toFixed(
+        1
+      )}) is higher than John's BMI (${johnBMI.toFixed(1)})`
+    );
+  } else {
+    console.log(
+      `John's BMI (${johnBMI.toFixed(
+        1
+      )}) is higher than Marks's BMI (${markBMI.toFixed(1)})`
+    );
   }
 
-  
   const number1 = 0;
-  console.log(Boolean(number1))
+  console.log(Boolean(number1));
 
   const number2 = 1;
-  console.log(Boolean(number2))
+  console.log(Boolean(number2));
 
-  const number3 = prompt("Enter a Number: ")
+  const number3 = prompt("Enter a Number: ");
   console.log(typeof number3);
 
   if (number3 === 18) {
-       console.log("Number")
-  }else {
-    console.log("String")
+    console.log("Number");
+  } else {
+    console.log("String");
   }
+
+  if (number3 == 18) {
+    console.log("Number");
+  } else {
+    console.log("String");
+  }
+
 
   return <div>Challenge1</div>;
 }
