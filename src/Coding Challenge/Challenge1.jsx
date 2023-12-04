@@ -24,14 +24,14 @@ function Challenge1() {
   }
 
   
-  const number = 0;
-  console.log(Boolean(number))
+  const number1 = 0;
+  console.log(Boolean(number1))
 
-  const number = 1;
-  console.log(Boolean(number))
+  const number2 = 1;
+  console.log(Boolean(number2))
 
-  const number = 1;
-  console.log(String(number))
+  const number3 = 1;
+  console.log(String(number3))
 
   return <div>Challenge1</div>;
 }
