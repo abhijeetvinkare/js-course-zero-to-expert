@@ -3,6 +3,7 @@ import Challenge2 from "./Coding Challenge/Challenge2"
 import Challenge3 from "./Coding Challenge/Challenge3"
 import Challenge4 from "./Coding Challenge/Challenge4"
 import Challenge5 from "./Coding Challenge/Challenge5"
+import Challenge6 from "./Coding Challenge/Challenge6"
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <Challenge3 />   
       <Challenge4 />   
       <Challenge5 />
+      <Challenge6 />
     </>
   )
 }
