@@ -28,7 +28,8 @@ function Challenge8() {
   // Test cases
   console.log(squareDigits(9119)); // Output: 811181
   console.log(squareDigits(765)); // Output: 493625
-  console.log(squareDigits(91545545)); // 
+  console.log(squareDigits(91545545));
+  console.log(squareDigits(0));
   
   return <div>Challenge8</div>;
 }
