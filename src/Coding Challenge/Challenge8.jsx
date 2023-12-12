@@ -11,25 +11,64 @@ function Challenge8() {
 
   // Happy Coding!
 
-  function squareDigits(num) {
 
-    const digit1 = num.toString().split("");
-    const digit2 = digit1.map(Number);
+  // solution
+  // function squareDigits(num) {
 
-    const result1 = digit2.map((n) => n * n);
-    const result2 = result1.join("");
-    const finalResult = Number(result2);
+  //   const digit1 = num.toString().split("");
+  //   const digit2 = digit1.map(Number);
 
-    console.log(digit1, digit2, result1, result2, finalResult);
+  //   const result1 = digit2.map((n) => n * n);
+  //   const result2 = result1.join("");
+  //   const finalResult = Number(result2);
 
-    return finalResult;
+  //   console.log(digit1, digit2, result1, result2, finalResult);
+
+  //   return finalResult;
+  // }
+
+  // // Test cases
+  // console.log(squareDigits(9119)); // Output: 811181
+  // console.log(squareDigits(765)); // Output: 493625
+  // console.log(squareDigits(91545545));
+  // console.log(squareDigits(0));
+
+
+
+
+//  You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+
+// #Examples:
+
+// Kata.getMiddle("test") should return "es"
+
+// Kata.getMiddle("testing") should return "t"
+
+// Kata.getMiddle("middle") should return "dd"
+
+// Kata.getMiddle("A") should return "A"
+
+
+function getMiddle(string) {
+  const splitString = string.split("")
+  const stringLength = splitString.length;
+  const getMiddleNum = stringLength / 2;
+  const checkisDecimal = getMiddleNum % 1 !== 0;
+
+  const middleLetters = [];
+  if (checkisDecimal) {
+    const round = Math.trunc(getMiddleNum)
+    middleLetters.push(splitString[round]);
+  }else{
+    middleLetters.push(splitString[getMiddleNum - 1]);
+    middleLetters.push(splitString[getMiddleNum]);
   }
 
-  // Test cases
-  console.log(squareDigits(9119)); // Output: 811181
-  console.log(squareDigits(765)); // Output: 493625
-  console.log(squareDigits(91545545));
-  console.log(squareDigits(0));
+  return middleLetters.join("")
+}
+
+getMiddle("Hello");
+console.log(getMiddle("Hellooooo"))
   
   return <div>Challenge8</div>;
 }
