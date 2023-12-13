@@ -122,14 +122,20 @@ function Challenge8() {
 
 function digitize(n) {
   const array = n.toString().split("");
+
+  const resultArray = []
   
-  for (let index = 0; index < array.length; index++) {
+  for (let index = array.length - 1; index >= 0 ; index--) {
     const element = array[index];
-    console.log(element)
+    resultArray.push(element)
   }
+
+  return resultArray.map(Number)
 }
 
 digitize(35231);
+console.log(digitize(35231))
+console.log(digitize(0))
 
 
   return <div>Challenge8</div>;
