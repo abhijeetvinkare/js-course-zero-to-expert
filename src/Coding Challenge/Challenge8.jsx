@@ -49,27 +49,89 @@ function Challenge8() {
 // Kata.getMiddle("A") should return "A"
 
 
-function getMiddle(string) {
-  const splitString = string.split("")
-  const stringLength = splitString.length;
-  const getMiddleNum = stringLength / 2;
-  const checkisDecimal = getMiddleNum % 1 !== 0;
+//solution
 
-  const middleLetters = [];
-  if (checkisDecimal) {
-    const round = Math.trunc(getMiddleNum)
-    middleLetters.push(splitString[round]);
-  }else{
-    middleLetters.push(splitString[getMiddleNum - 1]);
-    middleLetters.push(splitString[getMiddleNum]);
+// function getMiddle(string) {
+//   const splitString = string.split("")
+//   const stringLength = splitString.length;
+//   const getMiddleNum = stringLength / 2;
+//   const checkisDecimal = getMiddleNum % 1 !== 0;
+
+//   const middleLetters = [];
+//   if (checkisDecimal) {
+//     const round = Math.trunc(getMiddleNum)
+//     middleLetters.push(splitString[round]);
+//   }else{
+//     middleLetters.push(splitString[getMiddleNum - 1]);
+//     middleLetters.push(splitString[getMiddleNum]);
+//   }
+
+//   return middleLetters.join("")
+// }
+
+// getMiddle("Hello");
+// console.log(getMiddle("Hellooooo"))
+
+
+
+// ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
+
+// If the function is passed a valid PIN string, return true, else return false.
+
+// Examples (Input --> Output)
+// "1234"   -->  true
+// "12345"  -->  false
+// "a234"   -->  false
+
+
+//solution
+
+// function test(pin) {
+
+//   var isFourSixCheck = false; 
+//   if (pin !== Number) {
+//     const pintoString = pin.toString()
+//     const pinLength = pintoString.length
+//     if (pinLength >= 4 && pinLength <= 6) {
+//       isFourSixCheck = true;
+//     }
+//   }else{
+//     const pinLength = pin.length
+//     if (pinLength >= 4 && pinLength <= 6) {
+//       isFourSixCheck = true;
+//     }
+//   }
+
+//   return isFourSixCheck;
+// }
+  
+// console.log(test(1234))
+// console.log(test("1234"))
+// console.log(test(123))
+// console.log(test("a123"))
+// test(1234)
+
+
+// Convert number to reversed array of digits
+// Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+
+// Example(Input => Output):
+// 35231 => [1,3,2,5,3]
+// 0 => [0]
+
+
+function digitize(n) {
+  const array = n.toString().split("");
+  
+  for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    console.log(element)
   }
-
-  return middleLetters.join("")
 }
 
-getMiddle("Hello");
-console.log(getMiddle("Hellooooo"))
-  
+digitize(35231);
+
+
   return <div>Challenge8</div>;
 }
 
