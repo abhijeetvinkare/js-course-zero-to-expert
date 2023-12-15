@@ -120,23 +120,31 @@ function Challenge8() {
 // 0 => [0]
 
 
-function digitize(n) {
-  const array = n.toString().split("");
+// function digitize(n) {
+//   const array = n.toString().split("");
 
-  const resultArray = []
+//   const resultArray = []
   
-  for (let index = array.length - 1; index >= 0 ; index--) {
-    const element = array[index];
-    resultArray.push(element)
-  }
+//   for (let index = array.length - 1; index >= 0 ; index--) {
+//     const element = array[index];
+//     resultArray.push(element)
+//   }
 
-  return resultArray.map(Number)
+//   return resultArray.map(Number)
+// }
+
+// digitize(35231);
+// console.log(digitize(35231))
+// console.log(digitize(0))
+
+
+// Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+
+function evenOdd(num) {
+  return num % 2 == 0 ? 'even' : 'odd';
 }
 
-digitize(35231);
-console.log(digitize(35231))
-console.log(digitize(0))
-
+console.log(evenOdd(10))
 
   return <div>Challenge8</div>;
 }
