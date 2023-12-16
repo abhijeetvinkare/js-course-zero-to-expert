@@ -11,7 +11,6 @@ function Challenge8() {
 
   // Happy Coding!
 
-
   // solution
   // function squareDigits(num) {
 
@@ -33,123 +32,146 @@ function Challenge8() {
   // console.log(squareDigits(91545545));
   // console.log(squareDigits(0));
 
+  //  You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
 
+  // #Examples:
 
+  // Kata.getMiddle("test") should return "es"
 
-//  You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+  // Kata.getMiddle("testing") should return "t"
 
-// #Examples:
+  // Kata.getMiddle("middle") should return "dd"
 
-// Kata.getMiddle("test") should return "es"
+  // Kata.getMiddle("A") should return "A"
 
-// Kata.getMiddle("testing") should return "t"
+  //solution
 
-// Kata.getMiddle("middle") should return "dd"
+  // function getMiddle(string) {
+  //   const splitString = string.split("")
+  //   const stringLength = splitString.length;
+  //   const getMiddleNum = stringLength / 2;
+  //   const checkisDecimal = getMiddleNum % 1 !== 0;
 
-// Kata.getMiddle("A") should return "A"
+  //   const middleLetters = [];
+  //   if (checkisDecimal) {
+  //     const round = Math.trunc(getMiddleNum)
+  //     middleLetters.push(splitString[round]);
+  //   }else{
+  //     middleLetters.push(splitString[getMiddleNum - 1]);
+  //     middleLetters.push(splitString[getMiddleNum]);
+  //   }
 
+  //   return middleLetters.join("")
+  // }
 
-//solution
+  // getMiddle("Hello");
+  // console.log(getMiddle("Hellooooo"))
 
-// function getMiddle(string) {
-//   const splitString = string.split("")
-//   const stringLength = splitString.length;
-//   const getMiddleNum = stringLength / 2;
-//   const checkisDecimal = getMiddleNum % 1 !== 0;
+  // ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
 
-//   const middleLetters = [];
-//   if (checkisDecimal) {
-//     const round = Math.trunc(getMiddleNum)
-//     middleLetters.push(splitString[round]);
-//   }else{
-//     middleLetters.push(splitString[getMiddleNum - 1]);
-//     middleLetters.push(splitString[getMiddleNum]);
-//   }
+  // If the function is passed a valid PIN string, return true, else return false.
 
-//   return middleLetters.join("")
-// }
+  // Examples (Input --> Output)
+  // "1234"   -->  true
+  // "12345"  -->  false
+  // "a234"   -->  false
 
-// getMiddle("Hello");
-// console.log(getMiddle("Hellooooo"))
+  //solution
 
+  // function test(pin) {
 
+  //   var isFourSixCheck = false;
+  //   if (pin !== Number) {
+  //     const pintoString = pin.toString()
+  //     const pinLength = pintoString.length
+  //     if (pinLength >= 4 && pinLength <= 6) {
+  //       isFourSixCheck = true;
+  //     }
+  //   }else{
+  //     const pinLength = pin.length
+  //     if (pinLength >= 4 && pinLength <= 6) {
+  //       isFourSixCheck = true;
+  //     }
+  //   }
 
-// ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
+  //   return isFourSixCheck;
+  // }
 
-// If the function is passed a valid PIN string, return true, else return false.
+  // console.log(test(1234))
+  // console.log(test("1234"))
+  // console.log(test(123))
+  // console.log(test("a123"))
+  // test(1234)
 
-// Examples (Input --> Output)
-// "1234"   -->  true
-// "12345"  -->  false
-// "a234"   -->  false
+  // Convert number to reversed array of digits
+  // Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
 
+  // Example(Input => Output):
+  // 35231 => [1,3,2,5,3]
+  // 0 => [0]
 
-//solution
+  // function digitize(n) {
+  //   const array = n.toString().split("");
 
-// function test(pin) {
+  //   const resultArray = []
 
-//   var isFourSixCheck = false; 
-//   if (pin !== Number) {
-//     const pintoString = pin.toString()
-//     const pinLength = pintoString.length
-//     if (pinLength >= 4 && pinLength <= 6) {
-//       isFourSixCheck = true;
-//     }
-//   }else{
-//     const pinLength = pin.length
-//     if (pinLength >= 4 && pinLength <= 6) {
-//       isFourSixCheck = true;
-//     }
-//   }
+  //   for (let index = array.length - 1; index >= 0 ; index--) {
+  //     const element = array[index];
+  //     resultArray.push(element)
+  //   }
 
-//   return isFourSixCheck;
-// }
-  
-// console.log(test(1234))
-// console.log(test("1234"))
-// console.log(test(123))
-// console.log(test("a123"))
-// test(1234)
+  //   return resultArray.map(Number)
+  // }
 
+  // digitize(35231);
+  // console.log(digitize(35231))
+  // console.log(digitize(0))
 
-// Convert number to reversed array of digits
-// Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+  // Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
 
-// Example(Input => Output):
-// 35231 => [1,3,2,5,3]
-// 0 => [0]
+  // function evenOdd(num) {
+  //   return num % 2 == 0 ? 'even' : 'odd';
+  // }
 
+  // function maps(x){
+  //   return x.map((num) => num * 2);
+  // }
 
-// function digitize(n) {
-//   const array = n.toString().split("");
+  // console.log(maps([1, 2, 3]))
 
-//   const resultArray = []
-  
-//   for (let index = array.length - 1; index >= 0 ; index--) {
-//     const element = array[index];
-//     resultArray.push(element)
-//   }
+  // A Narcissistic Number (or Armstrong Number) is a positive number which is the sum of its own digits, each raised to the power of the number of digits in a given base. In this Kata, we will restrict ourselves to decimal (base 10).
 
-//   return resultArray.map(Number)
-// }
+  // For example, take 153 (3 digits), which is narcissistic:
 
-// digitize(35231);
-// console.log(digitize(35231))
-// console.log(digitize(0))
+  //     1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153
+  // and 1652 (4 digits), which isn't:
 
+  //     1^4 + 6^4 + 5^4 + 2^4 = 1 + 1296 + 625 + 16 = 1938
+  // The Challenge:
 
-// Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+  // Your code must return true or false (not 'true' and 'false') depending upon whether the given number is a Narcissistic number in base 10.
 
-// function evenOdd(num) {
-//   return num % 2 == 0 ? 'even' : 'odd';
-// }
+  // This may be True and False in your language, e.g. PHP.
 
+  // Error checking for text strings or other invalid inputs is not required, only valid positive non-zero integers will be passed into the function.
 
-function maps(x){
-  return x.map((num) => num * 2);
-}
+  function armStrong(number) {
+    const numSplit = number.toString().split("").map(Number);
+    const numlength = numSplit.length;
 
-console.log(maps([1, 2, 3]))
+    const newArray = numSplit.map((num) => num ** numlength);
+    const additon = newArray.reduce((accumulator, currentvalue) => {
+      return accumulator + currentvalue;
+    });
+
+    return number === additon ? 'True' : 'False';
+
+  }
+
+  console.log(armStrong(153));
+  console.log(armStrong(1652));
+  console.log(armStrong(7));
+  console.log(armStrong(122));
 
   return <div>Challenge8</div>;
 }
