@@ -155,23 +155,45 @@ function Challenge8() {
 
   // Error checking for text strings or other invalid inputs is not required, only valid positive non-zero integers will be passed into the function.
 
-  function armStrong(number) {
-    const numSplit = number.toString().split("").map(Number);
-    const numlength = numSplit.length;
+  // function armStrong(number) {
+  //   const numSplit = number.toString().split("").map(Number);
+  //   const numlength = numSplit.length;
 
-    const newArray = numSplit.map((num) => num ** numlength);
-    const additon = newArray.reduce((accumulator, currentvalue) => {
-      return accumulator + currentvalue;
-    });
+  //   const newArray = numSplit.map((num) => num ** numlength);
+  //   const additon = newArray.reduce((accumulator, currentvalue) => {
+  //     return accumulator + currentvalue;
+  //   });
 
-    return number === additon ? 'True' : 'False';
+  //   return number === additon ? 'True' : 'False';
 
-  }
+  // }
 
-  console.log(armStrong(153));
-  console.log(armStrong(1652));
-  console.log(armStrong(7));
-  console.log(armStrong(122));
+  // console.log(armStrong(153));
+  // console.log(armStrong(1652));
+  // console.log(armStrong(7));
+  // console.log(armStrong(122));
+
+
+
+//   An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+
+// Example: (Input --> Output)
+
+// "Dermatoglyphics" --> true "aba" --> false "moOse" --> false (ignore letter case)
+
+// isIsogram "Dermatoglyphics" = true
+// isIsogram "moose" = false
+// isIsogram "aba" = false
+
+function isIsogram(str){
+  const letters = str.toLowerCase().split('');
+  return letters.every((letter, index) => letters.indexOf(letter) === index);
+}
+
+console.log(isIsogram("Hello"))
+console.log(isIsogram("Dermatoglyphics"))
+console.log(isIsogram("moose"))
+console.log(isIsogram("aba"))
 
   return <div>Challenge8</div>;
 }
