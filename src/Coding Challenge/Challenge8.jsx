@@ -173,39 +173,59 @@ function Challenge8() {
   // console.log(armStrong(7));
   // console.log(armStrong(122));
 
+  //   An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
 
+  // Example: (Input --> Output)
 
-//   An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+  // "Dermatoglyphics" --> true "aba" --> false "moOse" --> false (ignore letter case)
 
-// Example: (Input --> Output)
+  // isIsogram "Dermatoglyphics" = true
+  // isIsogram "moose" = false
+  // isIsogram "aba" = false
 
-// "Dermatoglyphics" --> true "aba" --> false "moOse" --> false (ignore letter case)
+  // function isIsogram(str){
+  //   const letters = str.toLowerCase().split('');
+  //   return letters.every((letter, index) => letters.indexOf(letter) === index);
+  // }
 
-// isIsogram "Dermatoglyphics" = true
-// isIsogram "moose" = false
-// isIsogram "aba" = false
+  // console.log(isIsogram("Hello"))
+  // console.log(isIsogram("Dermatoglyphics"))
+  // console.log(isIsogram("moose"))
+  // console.log(isIsogram("aba"))
 
-// function isIsogram(str){
-//   const letters = str.toLowerCase().split('');
-//   return letters.every((letter, index) => letters.indexOf(letter) === index);
-// }
+  // Your task is to sort a given string. Each word in the string will contain a single number. This number is the position the word should have in the result.
 
-// console.log(isIsogram("Hello"))
-// console.log(isIsogram("Dermatoglyphics"))
-// console.log(isIsogram("moose"))
-// console.log(isIsogram("aba"))
+  // Note: Numbers can be from 1 to 9. So 1 will be the first word (not 0).
 
+  // If the input string is empty, return an empty string. The words in the input String will only contain valid consecutive numbers.
 
-// Your task is to sort a given string. Each word in the string will contain a single number. This number is the position the word should have in the result.
+  // Examples
+  // "is2 Thi1s T4est 3a"  -->  "Thi1s is2 3a T4est"
+  // "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
+  // ""  -->  ""
 
-// Note: Numbers can be from 1 to 9. So 1 will be the first word (not 0).
+function sortStringWithNumbers(inputString) {
+    if (!inputString) {
+        return "";
+    }
+    const words = inputString.split(" ");
+    const wordsDict = {};
+    for (const word of words) {
+        for (const char of word) {
+            if (!isNaN(char)) {
+                wordsDict[parseInt(char)] = word;
+                break;
+            }
+        }
+    }
+    const sortedWords = [];
+    for (let i = 1; i <= Object.keys(wordsDict).length; i++) {
+        sortedWords.push(wordsDict[i]);
+    }
+    return sortedWords.join(" ");
+}
 
-// If the input string is empty, return an empty string. The words in the input String will only contain valid consecutive numbers.
-
-// Examples
-// "is2 Thi1s T4est 3a"  -->  "Thi1s is2 3a T4est"
-// "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
-// ""  -->  ""
+  console.log(sortStringWithNumbers("is2 Thi1s T4est 3a"));
 
   return <div>Challenge8</div>;
 }
