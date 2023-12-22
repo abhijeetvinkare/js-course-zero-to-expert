@@ -226,7 +226,8 @@ function sortStringWithNumbers(inputString) {
 }
 
   console.log(sortStringWithNumbers("is2 Thi1s T4est 3a"));
-  console.log(sortStringWithNumbers("are2 you3 how1"))
+  console.log(sortStringWithNumbers("are2 you3 how1"));
+  console.log(sortStringWithNumbers("are you how"))
 
   return <div>Challenge8</div>;
 }
