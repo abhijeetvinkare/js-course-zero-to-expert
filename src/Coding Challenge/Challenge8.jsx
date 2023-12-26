@@ -204,28 +204,56 @@ function Challenge8() {
   // "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
   // ""  -->  ""
 
-function sortStringWithNumbers(inputString) {
-    if (!inputString) {
-        return "";
-    }
-    const words = inputString.split(" ");
-    const wordsDict = {};
-    for (const word of words) {
-        for (const char of word) {
-            if (!isNaN(char)) {
-                wordsDict[parseInt(char)] = word;
-                break;
-            }
-        }
-    }
-    const sortedWords = [];
-    for (let i = 1; i <= Object.keys(wordsDict).length; i++) {
-        sortedWords.push(wordsDict[i]);
-    }
-    return sortedWords.join(" ");
-}
+// function sortStringWithNumbers(inputString) {
+//     if (!inputString) {
+//         return "";
+//     }
+//     const words = inputString.split(" ");
+//     const wordsDict = {};
+//     for (const word of words) {
+//         for (const char of word) {
+//             if (!isNaN(char)) {
+//                 wordsDict[parseInt(char)] = word;
+//                 break;
+//             }
+//         }
+//     }
+//     const sortedWords = [];
+//     for (let i = 1; i <= Object.keys(wordsDict).length; i++) {
+//         sortedWords.push(wordsDict[i]);
+//     }
+//     return sortedWords.join(" ");
+// }
 
-  console.log(sortStringWithNumbers("is2 Thi1s T4est 3a"));
+//   console.log(sortStringWithNumbers("is2 Thi1s T4est 3a"));
+
+
+// Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
+
+// Examples:
+
+// spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw" 
+// spinWords( "This is a test") => returns "This is a test" 
+// spinWords( "This is another test" )=> returns "This is rehtona test"
+
+function spinWords(str) {
+    // Split the input string into an array of words
+    const words = str.split(' ');
+  
+    // Iterate through each word and reverse it if it has five or more letters
+    const reversedWords = words.map(word => {
+      return word.length >= 5 ? word.split('').reverse().join('') : word;
+    });
+  
+    // Join the reversed words back into a string and return
+    return reversedWords.join(' ');
+  }
+  
+  // Examples:
+  console.log(spinWords("Hey fellow warriors")); // Output: "Hey wollef sroirraw"
+  console.log(spinWords("This is a test")); // Output: "This is a test"
+  console.log(spinWords("This is another test")); // Output: "This is rehtona test"
+
 
   return <div>Challenge8</div>;
 }
