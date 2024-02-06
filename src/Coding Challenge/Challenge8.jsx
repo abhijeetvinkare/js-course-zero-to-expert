@@ -293,6 +293,7 @@ function toWeirdCase(str){
 }
 
 console.log(toWeirdCase("String"))
+console.log(toWeirdCase("WeIrD StRiNg CaSe"))
 
   return <div>Challenge8</div>;
 }
